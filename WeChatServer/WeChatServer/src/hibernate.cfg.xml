@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql:///wechat</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">123456</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <!--自动建表  update若无表建表，有则更新-->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!--制定session与当前线程绑定（调用getCurrentSession()方法必须有此配置，并且session不需要手动关闭）-->
+        <property name="hibernate.current_session_context_class">thread</property>
+
+        <!--引入所有的映射文件-->
+        <mapping resource="com/wechat/model/User.hbm.xml"></mapping>
+        <mapping resource="com/wechat/model/Friend.hbm.xml"></mapping>
+        <mapping resource="com/wechat/model/ChatContent.hbm.xml"></mapping>
+    </session-factory>
+</hibernate-configuration>
+
+
+
+
+
+
+
+
+
+
+
+
+

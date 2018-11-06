@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FriendsActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="addfriend"
+            android:text="添加好友"
+            android:textSize="25sp" />
+        <Button
+            android:id="@+id/friends"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="exit"
+            android:text="退出"
+            android:textSize="25sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <ListView
+            android:id="@+id/fri_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:listSelector="@android:color/transparent"></ListView>
+    </LinearLayout>
+</LinearLayout>

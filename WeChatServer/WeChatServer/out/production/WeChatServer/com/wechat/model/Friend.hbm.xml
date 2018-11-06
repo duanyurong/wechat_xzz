@@ -1,0 +1,14 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!--package属性相当于导包-->
+<hibernate-mapping package="com.wechat.model">
+                <class name="Friend" table="friend">
+                    <id name="id" column="id">
+                       <generator class="native"></generator>
+                    </id>
+                    <property name="u_id" column="u_id"></property>
+                    <property name="remark" column="remark"></property>
+                    <property name="f_id" column="f_id"></property>
+                </class>
+</hibernate-mapping>

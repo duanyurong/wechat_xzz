@@ -1,0 +1,15 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!--package属性相当于导包-->
+<hibernate-mapping package="com.wechat.model">
+                <class name="ChatContent" table="offonlinemsg">
+                    <id name="id" column="id">
+                       <generator class="native"></generator>
+                    </id>
+                    <property name="from_acc" column="from_acc"></property>
+                    <property name="my_acc" column="my_acc"></property>
+                    <property name="content" column="content"></property>
+                    <property name="me" column="me"></property>
+                </class>
+</hibernate-mapping>
